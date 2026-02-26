@@ -176,7 +176,7 @@
     .hero-slide {
       padding: 0;
       overflow: hidden;
-      margin-top: 56px;
+      margin-top: 0;
     }
     .hero-slide .slide-content {
       min-height: auto;
@@ -849,15 +849,17 @@
     .cta-paw.p4 { top: 100px; right: 80px; transform: rotate(15deg); }
 
     /* ── RESPONSIVE ── */
+    /* ── TABLET ── */
     @media (max-width: 900px) {
       .slide { padding: 40px 30px 0; }
-      .slide-footer { padding: 14px 30px; }
+      .slide-footer { padding: 14px 30px; margin-left: -30px; margin-right: -30px; }
       .hero-slide .slide-content { grid-template-columns: 1fr; padding: 40px 30px; }
       .hero-visual { display: none; }
       .hero-text h1 { font-size: 2.8rem; }
       .hero-footer { padding: 14px 30px; }
       .concept-cards { grid-template-columns: 1fr; }
-      .link-bio-layout { grid-template-columns: 1fr; }
+      .link-bio-layout { grid-template-columns: 1fr; gap: 30px; }
+      .link-bio-img img { max-height: 400px; }
       .steps-grid { grid-template-columns: repeat(2, 1fr); }
       .step-arrow { display: none; }
       .paws-layout { grid-template-columns: 1fr; }
@@ -868,6 +870,84 @@
       .pricing-features.two-col { grid-template-columns: 1fr; }
       .video-layout { grid-template-columns: 1fr; }
       h2.slide-title { font-size: 2rem; }
+      .slide-content { min-height: auto; }
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 600px) {
+      .slide { padding: 28px 18px 0; margin-bottom: 12px; }
+      .slide-footer { padding: 12px 18px; margin-left: -18px; margin-right: -18px; }
+      .slide-footer p { font-size: 0.75rem; }
+      .slide-content { min-height: auto; }
+
+      /* Hero */
+      .hero-slide { margin-top: 0; }
+      .hero-slide .slide-content { padding: 30px 18px; }
+      .hero-text h1 { font-size: 2rem; letter-spacing: 3px; }
+      .hero-text .subtitle { font-size: 1.2rem; }
+      .hero-text .desc { font-size: 0.82rem; }
+      .hero-footer { padding: 12px 18px; }
+      .hero-footer p { font-size: 0.6rem; letter-spacing: 2px; }
+
+      /* Titles & body */
+      h2.slide-title { font-size: 1.6rem; margin-bottom: 14px; }
+      .section-label { font-size: 0.6rem; letter-spacing: 3px; }
+      .body-text { font-size: 0.84rem; line-height: 1.65; }
+
+      /* Concept cards */
+      .concept-cards { gap: 14px; margin-top: 20px; margin-bottom: 24px; }
+      .concept-card { padding: 20px 16px; gap: 12px; }
+
+      /* Link in bio */
+      .link-bio-layout { gap: 20px; }
+      .link-bio-img img { max-height: 340px; }
+      .try-bot-badge { font-size: 0.85rem; padding: 12px 20px; }
+      .check-list li { font-size: 0.82rem; }
+
+      /* How it works */
+      .steps-grid { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; margin-bottom: 24px; }
+      .step-icon-box { height: 80px; }
+      .step-icon-img { width: 40px; height: 40px; }
+      .step-body { padding: 14px 12px 18px; }
+      .step-body h3 { font-size: 0.82rem; }
+      .step-body p { font-size: 0.72rem; }
+
+      /* PAWS */
+      .paws-layout { gap: 20px; }
+
+      /* Options / channels */
+      .options-grid { gap: 14px; }
+
+      /* Chat layout */
+      .chat-layout { gap: 20px; }
+
+      /* DA cards */
+      .da-cards { gap: 14px; }
+      .da-icon-box img { width: 44px; height: 44px; }
+
+      /* DA screenshot */
+      .da-screenshot img { border-radius: 6px; }
+
+      /* Pricing */
+      .pricing-grid { gap: 18px; margin-top: 20px; margin-bottom: 24px; }
+      .pricing-card-body { padding: 24px 18px; }
+      .pricing-card-body .card-title { font-size: 1.1rem; }
+      .pricing-card-body .price-main { font-size: 1.1rem; }
+      .pricing-card-body .price-sub { font-size: 1.1rem; }
+      .pricing-card-body .price-detail { font-size: 0.78rem; }
+      .pricing-example-link { font-size: 0.78rem; padding: 9px 16px; }
+
+      /* Video layout */
+      .video-layout { gap: 20px; }
+      .video-pricing-card h3 { font-size: 1rem; }
+      .video-pricing-card .price-main { font-size: 1.4rem; }
+
+      /* CTA */
+      .cta-slide h2 { font-size: 1.8rem !important; }
+      .cta-body { font-size: 0.84rem !important; }
+      .cta-links { font-size: 0.8rem !important; }
+      .cta-emails a { font-size: 0.85rem; }
+      .cta-paw img { width: 30px !important; }
     }
   </style>
 </head>
